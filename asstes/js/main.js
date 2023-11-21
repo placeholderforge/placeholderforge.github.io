@@ -43,7 +43,7 @@ function generateAndDownload() {
           const dataUrl = canvas.toDataURL('image/png');
   
           // Add the watermarked image to the zip file
-          zip.file(file.name.replace(/\.[^/.]+$/, '_pf.png'), dataUrl.substr(dataUrl.indexOf(',') + 1), { base64: true });
+          zip.file(file.name.replace(/\.[^/.]+$/, '.png'), dataUrl.substr(dataUrl.indexOf(',') + 1), { base64: true });
   
           resolve();
         };
